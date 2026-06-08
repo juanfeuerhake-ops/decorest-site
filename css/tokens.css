@@ -1,0 +1,91 @@
+/* ── Decorest Chile · Design Tokens ── */
+
+:root {
+  /* Neutral luxury palette */
+  --color-ink: #121212;
+  --color-ink-soft: #1E1E1E;
+  --color-charcoal: #2A2622;
+  --color-warm-gray: #6B6560;
+  --color-warm-gray-light: #9A948C;
+  --color-stone: #E8E2DA;
+  --color-stone-muted: #D4C9BB;
+  --color-cream: #FAF8F5;
+  --color-cream-deep: #F3EFE9;
+  --color-white: #FFFFFF;
+  --color-gold: #A68B4B;
+  --color-gold-light: #C4A96A;
+  --color-gold-muted: rgba(166, 139, 75, 0.12);
+
+  /* Legacy aliases (sections not yet refactored) */
+  --gold: var(--color-gold);
+  --gold-light: var(--color-gold-light);
+  --cream: var(--color-cream);
+  --charcoal: var(--color-ink);
+  --warm-gray: var(--color-warm-gray);
+  --stone: var(--color-stone);
+  --stone-dark: var(--color-stone-muted);
+
+  /* Typography families */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Fluid type scale */
+  --text-xs: clamp(0.625rem, 0.58rem + 0.2vw, 0.6875rem);
+  --text-sm: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.88rem + 0.25vw, 1.0625rem);
+  --text-lg: clamp(1.0625rem, 0.95rem + 0.5vw, 1.25rem);
+  --text-display-sm: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  --text-display-md: clamp(2.75rem, 2rem + 3.5vw, 4.25rem);
+  --text-display-lg: clamp(3.25rem, 2.25rem + 5vw, 5.75rem);
+  --text-display-xl: clamp(4rem, 2.75rem + 6vw, 7rem);
+  --text-hero: clamp(3.75rem, 2.75rem + 7vw, 8.25rem);
+  --text-hero-sub: clamp(1rem, 0.92rem + 0.35vw, 1.1875rem);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Layout */
+  --container-max: 1320px;
+  --container-wide: 1440px;
+  --container-padding: clamp(1.25rem, 4vw, 3.5rem);
+  --section-padding-y: clamp(4.5rem, 9vw, 7.5rem);
+  --nav-height: 72px;
+  --hero-height: 100svh;
+
+  /* Borders & radius */
+  --border-subtle: 0.5px solid var(--color-stone-muted);
+  --border-hairline: 1px solid rgba(18, 18, 18, 0.08);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --duration-fast: 200ms;
+  --duration-base: 450ms;
+  --duration-slow: 900ms;
+
+  /* Shadows */
+  --shadow-nav: 0 1px 0 rgba(18, 18, 18, 0.04);
+  --shadow-soft: 0 24px 48px -12px rgba(18, 18, 18, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
+}
