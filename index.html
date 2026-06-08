@@ -197,9 +197,9 @@
           <h2>Lo más <em>deseado</em> esta temporada</h2>
         </div>
         <div class="products stagger-children">
-          <article class="product-card reveal">
+          <article class="product-card reveal" role="button" tabindex="0" data-product="sofa" aria-label="Ver más imágenes del sofá">
             <div class="product-img">
-              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                 <rect width="400" height="280" fill="#EAE4DC"/>
                 <rect x="0" y="210" width="400" height="70" fill="#DDD6CC" opacity="0.5"/>
                 <rect x="40" y="115" width="320" height="110" rx="6" fill="#8B7355"/>
@@ -217,10 +217,11 @@
             <h3 class="product-name">Sofá</h3>
             <p class="product-mat">Tela premium · Fabricación propia</p>
             <p class="product-price">Desde $890.000</p>
+            <p class="product-link">Ver más imágenes</p>
           </article>
-          <article class="product-card reveal">
+          <article class="product-card reveal" role="button" tabindex="0" data-product="calacatta" aria-label="Ver más imágenes de Mesa Calacatta">
             <div class="product-img">
-              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                 <rect width="400" height="280" fill="#F0EBE3"/>
                 <rect x="70" y="90" width="260" height="90" rx="3" fill="#D8D0C6"/>
                 <rect x="70" y="90" width="260" height="8" rx="2" fill="#C4BCB2"/>
@@ -235,8 +236,9 @@
             <h3 class="product-name">Mesa Calacatta</h3>
             <p class="product-mat">Mármol natural · Importado</p>
             <p class="product-price">Desde $1.450.000</p>
+            <p class="product-link">Ver más imágenes</p>
           </article>
-          <article class="product-card reveal">
+          <article class="product-card reveal" role="button" tabindex="0" data-product="chimenea" aria-label="Ver más imágenes de Chimenea Línea Premium">
             <div class="product-img">
               <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
                 <rect width="400" height="280" fill="#E8E2DA"/>
@@ -254,6 +256,7 @@
             <h3 class="product-name">Chimenea Línea Premium</h3>
             <p class="product-mat">Instalación profesional incluida</p>
             <p class="product-price">Desde $680.000</p>
+            <p class="product-link">Ver más imágenes</p>
           </article>
         </div>
       </div>
@@ -408,6 +411,22 @@
       </div>
     </section>
   </main>
+
+  <div class="gallery-modal" id="product-gallery" aria-hidden="true">
+    <div class="gallery-modal__backdrop" data-gallery-close></div>
+    <section class="gallery-modal__panel" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+      <button class="gallery-modal__close" type="button" aria-label="Cerrar galería" data-gallery-close>
+        <i class="ti ti-x" aria-hidden="true"></i>
+      </button>
+      <div class="gallery-modal__media" id="gallery-media"></div>
+      <div class="gallery-modal__content">
+        <p class="eyebrow" id="gallery-kicker">Pieza destacada</p>
+        <h2 id="gallery-title">Producto</h2>
+        <p id="gallery-description"></p>
+        <div class="gallery-modal__thumbs" id="gallery-thumbs" aria-label="Imágenes del producto"></div>
+      </div>
+    </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
